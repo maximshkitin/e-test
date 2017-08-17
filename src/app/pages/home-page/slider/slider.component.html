@@ -1,6 +1,7 @@
+<div *ngIf="slides">
 <swiper [config]="config">
   <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngFor="let item of _sliderItems">
+      <div class="swiper-slide" *ngFor="let item of slides">
           <img [src]="item.src" [srcset]="item.srcset" [alt]="item.alt">
           <div class="container" *ngIf="item.caption">
               <div class="row">
@@ -22,3 +23,4 @@
       <!-- Add Pagination -->
   <div class="swiper-pagination"></div>
 </swiper>
+</div>

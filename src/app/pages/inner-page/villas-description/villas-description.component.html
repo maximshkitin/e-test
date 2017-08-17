@@ -1,0 +1,37 @@
+<div *ngIf="data">
+<div *ngFor="let item of data" class="col-md-8 col-md-offset-0 col-sm-12 col-sm-offset-6 col-xs-14 col-xs-offset-5">
+    <div class="villa-item">
+      <div class="villa-title stn-heading stn-heading__{{item.titleColor}}">
+        {{ item.title }}
+      </div>
+      <div class="img-wrapper">
+        <img [src]="item.img.src" [alt]="item.img.src">
+      </div>
+      <div class="villa-info">
+        <div class="villa-specs">
+          <div class="villa-signs">
+            <span class="villa-sign-item">
+              <i class="fa fa-male"></i>
+              {{ item.capabilities }}
+            </span>
+            <span *ngIf="item.additionalServices.length > 0">
+                <span *ngFor="let icon of item.additionalServices" class="villa-sign-item">
+                    <i class="fa fa-{{icon}}"></i>
+                  </span>
+            </span>
+            
+          </div>
+          <div class="additional-info">
+            {{ item.territory }}
+          </div>
+        </div>
+        <div class="villa-descr">
+          {{ item.description }}
+        </div>
+      </div>
+      <button class="btn btn__blue dif-width" (click)="openDetails(item.id)">
+        Lisatiedot ja -kuvat
+      </button>
+    </div>
+  </div>
+</div>

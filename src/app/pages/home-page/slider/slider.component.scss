@@ -49,6 +49,14 @@
     }
 }
 
+@media only screen and (max-width: 1139px) and (min-width: 992px) {
+  .swiper-caption {
+    blockquote {
+      font-size: 2em;
+    }
+  }
+}
+
 @media only screen and (max-width: 991px) {
     .swiper-caption {
       bottom: 50px;
@@ -64,9 +72,6 @@
 @media only screen and (max-width: 479px) {
     .swiper-caption blockquote {
       font-size: 1.25em;
-    }
-    .swiper-caption {
-      bottom: 30px;
     }
     .swiper-pagination .swiper-pagination-bullet {
       width: 10px;

@@ -7,6 +7,8 @@ import { QuoteSectionModule } from "../../components/quote-section/quote-section
 
 import { HomePageComponent } from "./home-page.component";
 import { SliderComponent } from './slider/slider.component';
+import { ThumbsComponent } from './thumbs/thumbs.component';
+import { VillasPreviewComponent } from './villas-preview/villas-preview.component';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { SliderComponent } from './slider/slider.component';
     declarations: [
         HomePageComponent,
         SliderComponent,
+        ThumbsComponent,
+        VillasPreviewComponent
     ],
     exports: [HomePageComponent]
   })

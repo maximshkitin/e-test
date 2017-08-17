@@ -1,0 +1,9 @@
+<div *ngIf="thumbs">
+<div class="col-md-4 col-sm-8 col-xs-12 thumbs-item-wrapper" *ngFor="let item of thumbs">
+    <div class="p3">
+      <div class="circled-thumb">
+        <img [src]="item.src" [alt]="item.alt">
+      </div>
+    </div>
+  </div>
+</div>

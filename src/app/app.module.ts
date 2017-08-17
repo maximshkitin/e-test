@@ -21,7 +21,7 @@ import { InMemoryDataService } from "./in-memory-data.service";
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

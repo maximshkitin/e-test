@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { sliderItems } from "./slider-items";
+import { AppService } from "../../../app.service";
 
 @Component({
   selector: 'app-slider',
@@ -10,13 +10,15 @@ import { sliderItems } from "./slider-items";
 })
 export class SliderComponent implements OnInit {
 
-  private _sliderItems = sliderItems;
-
   private config: Object;
+  private slides: any;
 
-  constructor() { }
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
+    this.appService.getSlides().then(slides => {
+      this.slides = slides
+    });
     this.config = {
       pagination: '.swiper-pagination',
       paginationClickable: true

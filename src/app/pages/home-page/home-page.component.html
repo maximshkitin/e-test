@@ -26,49 +26,7 @@
 	    </div>
 	    <div class="container-fluid">
 	    	<div class="villas-wrapper clearfix">
-	    		<div class="stn-villa-item-container">
-	    				<div class="stn-villa-item">
-		    				<a href="#" (click)="openDetails(0)" >
-		    					<img src="assets/image/main-content-item.jpg" alt="">
-		    					<div class="villa-item-overlay villa-item-overlay__green">
-		    						Villa Kukkula »
-		    					</div>
-		    				</a>
-	    				</div>
-	    		</div>
-	    		<div class="stn-villa-item-container">
-	    				<div class="stn-villa-item">
-		    				<a href="#" (click)="openDetails(1)" >
-		    					<img src="assets/image/main-content-item.jpg" alt="">
-		    					<div class="villa-item-overlay villa-item-overlay__blue">
-		    						Villa Kantri »
-		    					</div>
-								<ul class="villa-icons">
-									<li>
-										<i class="fa fa-paw"></i>
-									</li>
-									<li>
-										<i class="fa fa-wheelchair"></i>
-									</li>
-								</ul>
-		    				</a>
-	    				</div>
-	    		</div>
-	    		<div class="stn-villa-item-container">
-	    				<div class="stn-villa-item">
-		    				<a href="#" (click)="openDetails(2)" >
-		    					<img src="assets/image/main-content-item.jpg" alt="">
-		    					<div class="villa-item-overlay villa-item-overlay__red">
-		    						Villa Akuliina »
-		    					</div>
-								<ul class="villa-icons">
-									<li>
-										<i class="fa fa-paw"></i>
-									</li>
-								</ul>
-		    				</a>
-	    				</div>
-	    		</div>
+	    		<app-villas-preview></app-villas-preview>	
 	    	</div>
 	    </div>
 	</section>
@@ -96,13 +54,7 @@
 	  			</div>
 	  		</div>
 	  		<div class="row thumbs-wrapper">
-	  			<div class="col-md-4 col-sm-8 col-xs-12" *ngFor="let item of _thumbs">
-	  				<div class="p3">
-	  					<div class="circled-thumb">
-	  						<img [src]="item.src" [alt]="item.alt">
-	  					</div>
-	  				</div>
-	  			</div>
+	  			<app-thumbs></app-thumbs>
 	  		</div>
 		</div>
 	</section>

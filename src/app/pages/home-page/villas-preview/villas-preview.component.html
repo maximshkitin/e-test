@@ -1,0 +1,17 @@
+<div *ngIf="villas">
+  <div class="stn-villa-item-container" *ngFor="let item of villas">
+    <div class="stn-villa-item">
+      <a href="#" (click)="openDetails(item.id)" >
+        <img [src]="item.imgPreview.src" [alt]="item.imgPreview.alt">
+        <div class="villa-item-overlay villa-item-overlay__{{item.titleColor}}">
+          {{ item.title }} »
+        </div>
+      <ul class="villa-icons" *ngIf="item.icons.length > 0">
+        <li *ngFor="let icon of item.icons">
+          <i class="fa fa-{{ icon }}"></i>
+        </li>
+      </ul>
+      </a>
+    </div>
+  </div>
+</div>
