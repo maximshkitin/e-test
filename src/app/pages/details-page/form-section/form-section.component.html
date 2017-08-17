@@ -16,6 +16,9 @@
     	<form #submitForm="ngForm" action="">
 	    	<div class="col-md-7 col-md-offset-1">
 	    		<div class="datepicker-wrapper form-column-offset">
+					<div class="dp-wrap">	
+						<datepicker [showWeeks]="false" [onlyCurrentMonth]="true"></datepicker>
+					</div>
 	    		</div>
 	    	</div>
 	    	<div class="col-md-6 col-md-offset-1">
@@ -74,7 +77,7 @@
 	    					<textarea class="input-type" name="" id="" cols="30" rows="5"></textarea>
 	    				</label>
 	    			</div>
-	    			<button type="submit" class="btn btn__blue" [disabled]="!submitForm.form.valid" >
+	    			<button type="submit" class="btn btn-block btn__blue" [disabled]="!submitForm.form.valid" >
 	    				Tee varaus!
 	    			</button>
 	    		</div>

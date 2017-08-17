@@ -88,3 +88,82 @@ select {
 	line-height: 40px;
 
 }
+
+.dp-wrap {
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.datepicker-wrapper{
+	td {
+		border: 1px solid #aaa;
+		border-collapse: collapse;
+	}
+	.btn {
+		padding: 9px 11px;
+		margin: 0;
+		border-radius: 0;
+		width: auto;
+		font-size: 12px;
+		color: #585858;
+		background-color: #fff;
+		text-align: center;
+		&.active {
+			background-color: #e09a00;
+		}
+	}
+	table {
+		margin: 0 auto;
+		background-color: #fff;
+		border: 1px solid #1f1f1f;
+	}
+} 
+table {
+	thead {
+		tr:first-child th,
+		tr:first-child th button {
+			background-color: #d3d3d3!important;
+		}
+		tr:last-child th {
+			font-weight: 700;
+			color: #1f1f1f;
+		}
+	}
+}
+
+
+.glyphicon {
+	display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-chevron-left {
+	&:before {
+		content: '\f053';
+	}
+}
+.glyphicon-chevron-right {
+	&:before {
+		content: '\f054';
+	}
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1139px) {
+	.datepicker-wrapper{
+		.btn {
+			padding: 6px 8px;
+		}
+	}
+}
+
+@media only screen and (max-width: 399px) {
+	.datepicker-wrapper{
+		.btn {
+			padding: 5px 6px;
+		}
+	}
+}

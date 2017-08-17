@@ -1,3 +1,8 @@
 .villas-list {
 	padding-top: 50px;
 }
+@media only screen and (max-width: 991px) {
+	.villas-list {
+		padding: 0;
+	}
+}
