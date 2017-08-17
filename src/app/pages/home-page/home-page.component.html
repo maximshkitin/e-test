@@ -1,0 +1,145 @@
+<div id="main-page-content">
+  <app-slider></app-slider>
+
+	<section class="stn-content no-pb">
+	  	<div class="container">
+	  		<header>
+  				<h1 class="stn-heading">
+			      Huilataan välillä. Tervetuloa rennolle mökkilomalle!
+			    </h1>
+		    </header>
+	  		<div class="row">
+	  			<div class="col-md-offset-2 col-md-20">
+				    <div class="stn-description">
+				    	<p>
+				    		Huvilarannan kolme vuokrahuvilaa kutsuvat rennolle lomalle Keski-Suomeen Multialle. Villa Akuliina, Villa Kukkula ja Villa Kantri tarjoavat laadukkaat puitteet lomailuun puhdasvetisen Isojärven rannalla aidossa maalaismaisemassa. Huvilarannan vuokramökit ovat viihtyisiä, täysin varusteltuja 6 -8 hengen lomamökkejä ja ne ovat käytössä ympäri vuoden. 
+				    	</p>
+				    	<p>
+				    		<strong>
+				    			Tutustu ja ihastu mökkeihin
+				    			<i class="fa fa-angle-down"></i>
+				    		</strong>
+				    	</p>
+				    </div>
+	  			</div>
+	  		</div>
+	    </div>
+	    <div class="container-fluid">
+	    	<div class="villas-wrapper clearfix">
+	    		<div class="stn-villa-item-container">
+	    				<div class="stn-villa-item">
+		    				<a href="#" (click)="openDetails(0)" >
+		    					<img src="assets/image/main-content-item.jpg" alt="">
+		    					<div class="villa-item-overlay villa-item-overlay__green">
+		    						Villa Kukkula »
+		    					</div>
+		    				</a>
+	    				</div>
+	    		</div>
+	    		<div class="stn-villa-item-container">
+	    				<div class="stn-villa-item">
+		    				<a href="#" (click)="openDetails(1)" >
+		    					<img src="assets/image/main-content-item.jpg" alt="">
+		    					<div class="villa-item-overlay villa-item-overlay__blue">
+		    						Villa Kantri »
+		    					</div>
+								<ul class="villa-icons">
+									<li>
+										<i class="fa fa-paw"></i>
+									</li>
+									<li>
+										<i class="fa fa-wheelchair"></i>
+									</li>
+								</ul>
+		    				</a>
+	    				</div>
+	    		</div>
+	    		<div class="stn-villa-item-container">
+	    				<div class="stn-villa-item">
+		    				<a href="#" (click)="openDetails(2)" >
+		    					<img src="assets/image/main-content-item.jpg" alt="">
+		    					<div class="villa-item-overlay villa-item-overlay__red">
+		    						Villa Akuliina »
+		    					</div>
+								<ul class="villa-icons">
+									<li>
+										<i class="fa fa-paw"></i>
+									</li>
+								</ul>
+		    				</a>
+	    				</div>
+	    		</div>
+	    	</div>
+	    </div>
+	</section>
+	<section class="stn-content">
+		<div class="container">
+		  	<header>
+  				<h2 class="stn-heading">
+			      Huvilarannassa ei aika käy pitkäksi!
+			    </h2>
+		    </header>
+	  		<div class="row">
+	  			<div class="col-md-offset-2 col-md-20">
+				    <div class="stn-description">
+				    	<p>
+				    		Huvilarannan kolme vuokrahuvilaa kutsuvat rennolle lomalle Keski-Suomeen Multialle. Villa Akuliina,<br> Villa Kukkula ja Villa Kantri tarjoavat laadukkaat puitteet lomailuun puhdasvetisen Isojärven rannalla aidossa maalaismaisemassa.
+				    	</p>
+				    	<p>
+				    		<strong>
+				    			<a href="#">
+				    				Tutustu ja ihastu mökkeihin »
+				    			</a>
+				    		</strong>
+				    	</p>
+				    </div>
+	  			</div>
+	  		</div>
+	  		<div class="row thumbs-wrapper">
+	  			<div class="col-md-4 col-sm-8 col-xs-12" *ngFor="let item of _thumbs">
+	  				<div class="p3">
+	  					<div class="circled-thumb">
+	  						<img [src]="item.src" [alt]="item.alt">
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</div>
+		</div>
+	</section>
+	<section class="stn-content stn-main-bg">
+	  	<div class="container">
+	  		<header>
+  				<h2 class="stn-heading stn-main-bg-heading">
+		  			Markkulan Marjatila
+		  		</h2>
+	  		</header>
+	  		<div class="row">
+	  			<div class="col-md-12 col-sm-15 col-xs-18">
+			  		<p>
+			  			Mökkilomallasi voit poiketa ostamassa Markkulan Marjatilan mehuja ja glögiä suoraan tilalta ja kesäaikaan pääset nauttimaan tuoreita mansikoita ja mustaherukoita!
+			  		</p>
+			  		<p>
+			  			<a href="#">
+			  				<strong>Lue lisää Markkulan Marjatilasta »</strong>
+			  			</a>
+			  		</p>
+	  			</div>
+	  		</div>
+	  		<div class="row">
+	  			<div class="col-md-13 col-sm-17 col-xs-20">
+	  				<div class="img-left">
+	  					<img src="assets/image/main-cmp-bottles.png" alt="">
+	  				</div>
+	  				<div class="img-description">
+	  					<p class="title">Lahja!</p>
+	  					<p>
+	  						Tarjoamme Huvilarantaan saapuville lomalaisille pullollisen Markkulan Marjatilan kylmäpuristettua mustaherukka-mansikkamehua tai talviaikaan lämpimän mausteista mustaherukkaglögiä! 
+	  					</p>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+	</section>
+	<app-contact-section></app-contact-section>
+	<app-quote-section></app-quote-section>
+</div>

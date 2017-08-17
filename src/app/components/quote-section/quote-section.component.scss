@@ -1,0 +1,15 @@
+$grey: #e4e4e4;
+
+.stn-quote {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: $grey;
+	.stn-heading {
+		color: #515151;
+		font-size: 1.875em;
+	}
+	blockquote {
+		margin-top: 10px;
+		font-style: italic;
+	}
+}

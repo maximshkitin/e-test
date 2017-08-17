@@ -1,0 +1,196 @@
+$green: #82b415;
+$blue: #3b8fb0;
+
+.top-navbar {
+	margin-top: 10px;
+	text-align: right;
+
+}
+.select-lang {
+	display: inline-block;
+	li {
+		float: left;
+		&:not(:first-child) {
+			&:before {
+				margin-left: 10px;
+				margin-right: 10px;
+				content: '|';
+				color: $blue;
+			}
+		}
+		a {
+			font-size: .8125em;
+			&.active {
+				font-weight: bold;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.logo {
+	width: 283px;
+	float: left;
+}
+.logo .motto {
+	font-weight: 300;
+	margin-top: 5px;
+	padding-left: 3px;
+    font-size: 16px;
+    color: #777;
+}
+#main-navigation {
+	margin-top: 25px;
+	float: right;
+	ul {
+		li {
+			float: left;
+			&:not(:first-child) {
+				margin-left: 45px;
+			}
+			a {
+				position: relative;
+				color: #484848;
+				text-transform: uppercase;
+				font-size: 1.125em;
+				&.active:after, &:hover:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: -8px;
+					height: 3px;
+					border-radius: 3px;
+				}
+				&:hover:after {
+					background-color: rgba(59,143,176,.3);
+				}
+				&.active:after {
+					background-color: $blue;
+				}
+			}
+		}
+	}
+}
+
+.header-info-line {
+	margin-top: 30px;
+	margin-bottom: 9px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: $green;
+	color: #fff;
+	a {
+		color: #fff;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.left-side {
+		font-weight: 300;
+	}
+	.right-side {
+		a {
+			&:not(:first-child) {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+.hamburger-icon {
+	display: none;
+	margin-top: 7px;
+	float: right;
+	cursor: pointer;
+	font-size: 2.5em;
+}
+
+
+@media only screen and (max-width: 1139px) {
+	.hamburger-icon {
+		display: block;
+	}
+	#main-navigation {
+		display: none;
+		&.active {
+			display: block;
+		}
+		position: absolute;
+	    background-color: #fff;
+	    width: 100%;
+	    margin: 0;
+	    top: 100%;
+	    z-index: 100000;
+	    -webkit-box-shadow: 0 3px 3px 0 rgba(170,170,170,1);
+	    -moz-box-shadow: 0 3px 3px 0 rgba(170,170,170,1);
+	    box-shadow: 0 3px 3px 0 rgba(170,170,170,1);
+	    ul {
+	    	li {
+	    		float: none;
+	    		margin: 0 !important;
+	    		text-align: center;
+	    		a {
+	    			display: block;
+	    			padding: 10px;
+	    			&:hover, &.active {
+	    				&:after {
+	    					display: none;
+	    				}
+	    				background-color: rgba(91,150,183,.1);
+	    			}
+	    		}
+	    		&:not(:last-child) {
+	    			border-bottom: 1px solid #eee;
+	    		}
+	    	}
+	    }
+	}
+	.navigation {
+		position: relative;
+	}
+
+}
+
+@media screen and (max-width: 991px) {
+	.villa-item-overlay {
+		font-size: 1.5em;
+	}
+}
+@media screen and (max-width: 767px) {
+	.hamburger-icon {
+		margin-top: 15px;
+	}
+	.logo {
+		width: 210px;
+    	height: 29px;
+		margin-top: 10px;
+		img {
+			width: 210px;
+    		height: 29px;
+		}
+		.motto {
+			font-size: 12px;
+		}
+	}
+	body {
+		font-size: 13px;
+	}
+	.side-info {
+		text-align: center;
+		float: none;
+		margin-top: 3px;
+	}
+	.header-info-line {
+		margin-top: 15px;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.side-info {
+		font-size: 10px;
+	}
+}
+

@@ -1,0 +1,86 @@
+<section class="stn-content stn-contact-form" id="teevaraus">
+	<div class="container">
+		<header>
+			<h2 class="stn-heading">
+				Tee alustava varaus!
+			</h2>
+		</header>
+		<div class="row">
+			<div class="col-md-offset-4 col-md-16">
+				<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, magnam beatae quisquam voluptatibus ut eligendi labore. Minima debitis accusantium id.
+				</p>
+			</div>
+		</div>
+    <div class="row">
+    	<form #submitForm="ngForm" action="">
+	    	<div class="col-md-7 col-md-offset-1">
+	    		<div class="datepicker-wrapper form-column-offset">
+	    			<!-- datepicker -->
+	    		</div>
+	    	</div>
+	    	<div class="col-md-6 col-md-offset-1">
+	    		<div class="first-form-column form-column-offset">
+	    			<div class="input-item">
+	    				<label>
+	    					<span>Essumiani</span><br>
+	    					<input type="text" name="field1" [(ngModel)]="field1" required class="input-type">
+	    				</label>
+	    			</div>
+	    			<div class="input-item">
+	    				<label>
+	    					<span>Essumiani</span><br>
+	    					<input type="text" name="field2" [(ngModel)]="field2" required class="input-type">
+	    				</label>
+	    			</div>
+	    			<div class="input-item">
+	    				<label>
+	    					<span>Essumiani</span><br>
+	    					<input type="text" name="field3" [(ngModel)]="field3" required class="input-type">
+	    				</label>
+	    			</div>
+	    			<div class="input-item">
+	    				<label>
+	    					<span>Essumiani</span><br>
+	    					<input type="text" name="field4" [(ngModel)]="field4" required class="input-type">
+	    				</label>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="col-md-7 col-md-offset-1">
+	    		<div class="second-form-column form-column-offset">
+	    			<div class="select-line clearfix">
+	    				<label for="select">
+	    					<span>Select</span>
+	    				</label>
+	    				<div class="select-wrapper">
+	    					<select #selectElem [(ngModel)]="select" name="select" id="select">
+		    					<option value="1" selected>1</option>
+		    					<option value="2">2</option>
+		    					<option value="3">3</option>
+		    					<option value="4">4</option>
+		    					<option value="5">5</option>
+		    				</select>
+		    				<div class="fake-select">
+		    					 {{ select || '1' }}
+		    					 <div class="fake-btn">
+		    					 	<i class="fa fa-unsorted"></i>
+		    					 </div>
+		    				</div>
+	    				</div>
+	    			</div>
+	    			<div class="input-item">
+	    				<label>
+	    					<span>Muuta: (optional)</span>
+	    					<textarea class="input-type" name="" id="" cols="30" rows="5"></textarea>
+	    				</label>
+	    			</div>
+	    			<button type="submit" class="btn btn__blue" [disabled]="!submitForm.form.valid" >
+	    				Tee varaus!
+	    			</button>
+	    		</div>
+	    	</div>
+    	</form>
+    </div>
+	</div>
+</section>

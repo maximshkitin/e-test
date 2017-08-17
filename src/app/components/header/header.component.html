@@ -1,0 +1,74 @@
+<header id="main-header">
+	<div class="container">
+		<div class="top-navbar">
+			<div class="select-lang">
+				<ul class="clearfix">
+					<li><a href="#" class="active">Suomeksi</a></li>
+					<li><a href="#">English</a></li>
+					<li><a href="#">Russian</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="navigation clearfix">
+			<div class="logo">
+				<a routerLink="/home">
+					<img src="assets/image/logo.svg" width="283" height="38" alt="logo">
+					<div class="motto">Ihanat vuokrahuvilat rannalla!</div>
+				</a>
+			</div>
+			<div class="hamburger-icon" (click)='toggleMenu()'>
+				<i class="fa fa-bars"></i>
+			</div>
+			<nav id="main-navigation">
+				<ul class="clearfix" (click)='closeMenu()'>
+					<li>
+						<a routerLink="/home" routerLinkActive="active">Etusivu</a>
+					</li>
+					<li>
+						<a routerLink="/inner" routerLinkActive="active">Huvilat</a>
+					</li>
+					<li>
+						<a href="#">Aktiviteetit</a>
+					</li>
+					<li>
+						<a href="#">Marjatila</a>
+					</li>
+					<li>
+						<a href="#">Yfsafnasn</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="header-info-line">
+		<div class="container">
+			<div class="clearfix">
+				<div class="f-left left-side side-info">
+					<p>
+						<span class="semibold">
+							Ajgfsgdgsdf:
+						</span>
+						1.1.2015 Hyvää Uutta Vuotta 2015! »  
+						<a href="#">Lue lisää</a>
+					</p>
+				</div>
+				<div class="f-right right-side side-info">
+					<p>
+						<a href="tel:358953433212">
+							<span>
+								<i class="fa fa-phone"></i>
+								+358 95 343 3212
+							</span>
+						</a>
+						<a href="#">
+							<span>
+								<i class="fa fa-facebook-square"></i>
+								Facebook
+							</span>
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

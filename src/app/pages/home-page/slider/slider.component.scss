@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive");
+
+.swiper-slide {
+    position: relative;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 20px;
+}
+.swiper-pagination .swiper-pagination-bullet {
+    width: 18px;
+    height: 18px;
+    background-color: #fff; 
+    opacity: 1;
+ }
+ .swiper-pagination .swiper-pagination-bullet-active {
+   position: relative;
+ }
+ .swiper-pagination .swiper-pagination-bullet-active:after {
+   position: absolute;
+   content: '';
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   top: 50%;
+   left: 50%;
+   margin-top: -5px;
+   margin-left: -5px;
+   border-radius: 50%;
+   background-color: #4083a2;
+
+ }
+ 
+.swiper-caption {  
+    width: 100%;
+    position: absolute;
+    bottom: 75px;
+    text-align: center;
+    color: #fff;
+    blockquote {
+      font-size: 2.25em;
+      line-height: 1.25;
+      font-family: 'Cedarville Cursive', cursive;
+      text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.49);
+      cite {
+        font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+        font-size: .55em;
+        font-style: italic;
+      }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .swiper-caption {
+      bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .swiper-caption blockquote {
+      font-size: 1.75em;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .swiper-caption blockquote {
+      font-size: 1.25em;
+    }
+    .swiper-caption {
+      bottom: 30px;
+    }
+    .swiper-pagination .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+    .swiper-pagination .swiper-pagination-bullet-active:after {
+      width: 6px;
+      height: 6px;
+      margin-left: -3px;
+      margin-top: -3px;
+    }
+}
+
+
+
+
+
+
+

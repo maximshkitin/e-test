@@ -1,0 +1,24 @@
+<swiper [config]="config">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let item of _sliderItems">
+          <img [src]="item.src" [srcset]="item.srcset" [alt]="item.alt">
+          <div class="container" *ngIf="item.caption">
+              <div class="row">
+                <div class="col-md-12 col-md-offset-6 col-sm-16 col-sm-offset-4">
+                  <div class="swiper-caption">
+                    <blockquote>
+                        "{{ item.caption }}"
+                        <br>
+                        <cite>
+                            – {{ item.author }} –  
+                        </cite>    
+                    </blockquote> 
+                  </div>
+                </div>
+             </div>
+          </div>
+      </div>
+  </div>
+      <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</swiper>

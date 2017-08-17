@@ -1,0 +1,229 @@
+<div id="details-content" *ngIf="data">
+	<section class="stn-content no-pb">
+		<div class="container">
+			<header>
+				<h1 class="stn-heading stn-main-heading">
+					{{ data.title }}
+				</h1>
+			</header>
+			<div class="row">
+				<div class="col-md-18 col-md-offset-3">
+					<div class="details-descr-wrapper">
+						<p>
+							{{data.description}}
+						</p>
+					</div>
+					<hr class="details-hr">
+					<div class="details-anchor-nav">
+						<span> Hyppaa kphtaan: </span>
+						<ul class="clearfix details-anchors">
+							<li>
+								<a href="{{currentUrl}}#perustiedot">Perustiedot</a>
+							</li>
+							<li>
+								<a href="{{currentUrl}}#varustelu">Varustelu</a>
+							</li>
+							<li>
+								<a href="{{currentUrl}}#kuvat">Kuvat</a>
+							</li>
+							<li>
+								<a href="{{currentUrl}}#teevaraus">Tee varaus</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="details-hero hero-id-{{data.id}}">
+			<img [src]="data.cover.src" [srcset]="data.cover.srcset" [alt]="data.cover.alt">
+			<div class="container">
+				<div class="img-label">
+					<i class="fa fa-image"></i>
+					Katso lisaa kuvla!
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class="stn-content no-pb" id="perustiedot">
+		<div class="container">
+			<header>
+				<h2 class="stn-heading">
+					{{ data.stnInfo1.title }}
+				</h2>
+			</header>
+			<div class="villa-specs">
+				<div class="row multi-col-items">
+					<div class="col-md-7">
+						<ul>
+							<li *ngFor="let item of data.stnInfo1.items | slice:0:3">
+								<strong> {{ item.title }}: </strong>
+								{{ item.value }}
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-8 col-md-offset-1">
+						<ul>
+							<li *ngFor="let item of data.stnInfo1.items | slice:3:4">
+								<strong> {{ item.title }}: </strong>
+								{{ item.value }}
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-7 col-md-offset-1">
+						<ul>
+							<li *ngFor="let item of data.stnInfo1.items | slice:4">
+								<strong> {{ item.title }}: </strong>
+								{{ item.value }}
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="btns-set list-btns-set">
+					<a href="#" class="btn btn__blue dif-width">
+						<i class="fa fa-external-link-square"></i>
+						Katso pohjapiirros
+					</a>
+					<a href="#" class="btn btn__green dif-width">
+						<i class="fa fa-calendar"></i>
+						Tarkista varaustilanne
+						<i class="fa fa-angle-down"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="stn-content stn-grey" id="varustelu">
+		<div class="container">
+			<header>
+				<h2 class="stn-heading">
+					{{ data.stnInfo2.title }}
+				</h2>
+			</header>
+			<div class="row multi-col-items">
+				<div class="col-md-10 col-sm-12 col-xs-12">
+					<p>
+						<strong>
+							{{data.stnInfo2.items[0].title}}
+						</strong>
+					</p>
+					<div *ngIf="data.stnInfo2.items[0].points.length > 5; else oneColumn">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="dash-before">
+									<li *ngFor="let item of data.stnInfo2.items[0].points | slice:0:5">
+										{{ item }}
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-12">
+								<ul class="dash-before">
+									<li *ngFor="let item of data.stnInfo2.items[0].points | slice:5">
+										{{ item }}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+					<ng-template #oneColumn>
+						<ul class="dash-before">
+							<li *ngFor="let item of data.stnInfo2.items[0].points">
+								{{ item }}
+							</li>
+						</ul>
+					</ng-template>
+				</div>
+				<div class="col-md-4 col-md-offset-1 col-sm-12 col-xs-12 col-sm-offset-0 col-xs-offset-0">
+					<p>
+						<strong>
+							{{data.stnInfo2.items[1].title}}
+						</strong>
+					</p>
+					<ul class="dash-before">
+						<li *ngFor="let item of data.stnInfo2.items[1].points">
+							{{ item }}
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-md-offset-1 col-sm-12 col-xs-12 col-sm-offset-0 col-xs-offset-0">
+					<p>
+						<strong>
+							{{data.stnInfo2.items[2].title}}
+						</strong>
+					</p>
+					<ul class="dash-before">
+						<li *ngFor="let item of data.stnInfo2.items[2].points">
+							{{ item }}
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-md-offset-1 col-sm-12 col-xs-12 col-sm-offset-0 col-xs-offset-0">
+					<p>
+						<strong>
+							{{data.stnInfo2.items[3].title}}
+						</strong>
+					</p>
+					<ul class="dash-before">
+						<li *ngFor="let item of data.stnInfo2.items[3].points">
+							{{ item }}
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="stn-content" id="kuvat">
+		<div class="container">
+			<header>
+				<h2 class="stn-heading">
+					{{ data.stnInfo3.title }}
+				</h2>
+			</header>
+			<p>
+				{{ data.stnInfo3.description }}
+			</p>
+			<div class="details-thumbnails">
+				<div class="row">
+					<div class="col-md-22 col-md-offset-1">
+						<div class="custom-row row">
+							<div class="thumb-item" *ngFor="let item of data.stnInfo3.thumbnails">
+								<img [src]="item.src" 
+								[alt]="item.alt" (click)="enlargeImage(item.origImage)">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<app-form-section></app-form-section>
+	<section class="stn-content">
+	  <div class="container">
+	    <header>
+	      <h2 class="stn-heading">
+	        Tiedustelut
+	      </h2>
+	    </header>
+	    <div class="btns-set">
+	      <a href="tel:358407075783" class="btn btn__blue">
+	        <i class="fa fa-phone"></i>
+	        +358 40 707 5783
+	      </a>
+	      <a href="mailto:some@gmail.com" class="btn btn__green">
+	        <i class="fa fa-send"></i>
+	        Laheta viesti
+	      </a>
+	    </div>
+	    <p>
+	      <i class="fa fa-map-marker"></i>
+	      Markkulanraitti 24, 42520 Asunta
+	    </p>
+	    <p><a href="">Katso sijainti kartalla »</a></p>
+	  </div>
+	</section>
+</div>
+
+<app-pop-up *ngIf="!!imageUrl" [imageUrl]="imageUrl" (disable)="disablePopUp($event)"></app-pop-up>

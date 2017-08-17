@@ -1,0 +1,66 @@
+$green: #82b415;
+$blue: #3b8fb0;
+
+.stn-heading__blue {
+	color: #3b8fb0;
+}
+.stn-heading__red {
+	color: #f07884;
+}
+.villas-list {
+	padding-top: 50px;
+}
+
+.villa-item {
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	.img-wrapper {
+		margin-top: 20px;
+	}
+}
+.villa-info {
+	min-height: 270px;
+}
+.villa-specs {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #bfbfbf;
+}
+
+.villa-sign-item {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-weight: bold;
+	font-size: 1.3em;
+	i {
+		font-size: 1.125em;
+	}
+}
+
+.additional-info {
+	margin-top: 3px;
+	font-size: 1.125em;
+}
+
+.villa-descr {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+	.villa-info {
+		min-height: auto;
+	}
+	.villa-descr {
+		padding-bottom: 40px;
+	}
+	.villas-list {
+		> div {
+			&:not(:first-child) {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
