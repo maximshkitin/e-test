@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { VillasPreview } from "./../../../villas-preview";
 
 import { AppService } from "../../../app.service";
 

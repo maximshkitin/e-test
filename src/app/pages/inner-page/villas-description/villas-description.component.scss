@@ -52,12 +52,8 @@ $blue: #3b8fb0;
 	.villa-descr {
 		padding-bottom: 40px;
 	}
-	.villas-list {
-		> div {
-			&:not(:first-child) {
-				margin-top: 40px;
-			}
-		}
+	.villa-item {
+		margin-top: 40px;
 	}
 }
 
